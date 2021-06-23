@@ -59,15 +59,15 @@ const ben = Person ("ben", "bryant", "red")
 const seth = Person ("seth", "bowman", "red")
 
 ben.codeSome()
-seth.codeSOme()
+seth.codeSome()
 
 //
-const singleDigiits = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+const singleDigits = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 console.log(singleDigits.length) //9 will come up
-console.log(singleDigiits[8]) //9 will come up because the first would be index 0
+console.log(singleDigits[8]) //9 will come up because the first would be index 0
 
-letn name = "Ben Bryant"
+let name = "Ben Bryant"
 console.log(name.length) //ten characters because the space counts.
 
 
@@ -116,3 +116,37 @@ team.city
 
 //what if access the teams wins
 team.record.wins  //city is a string dot notation is used to access properites on an object whereas city is an object (so take the city out.): this will give the number 42
+
+
+//objects - one more excercise
+// butilding blueprint
+/*
+let bluePrint = { }  // this is the oject
+
+let building = {
+    height: "3 stories",
+    windows: 200,
+    floors: 3,
+    hasElevators: true,
+    status: function () //this line is a method
+};
+*/
+
+let building = {
+    name: "GNC Bank",
+    height: "3 stories",
+    windows: 200,
+    floors: 3,
+    hasElevators: true,
+    status: "under construction",
+    displayStatus: function () {
+        console.log(`${this.name} is ${this.status}.`);
+    },
+};
+
+building.displayStatus();
+
+building.status = "newly renovated";
+
+building.displayStatus(); //line 148 changes the status for this
+
