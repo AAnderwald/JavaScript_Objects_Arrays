@@ -1,3 +1,76 @@
+//array are typically similar properties
+const instructors = ["Ben", "Whit", "Jeremy", "John"]
+
+console.log(instructors)
+//want to print only whit
+console.log(instructors[1])  //will just print whit because ben is 0
+
+const favoriteNumber = new Array(16,34,90,21); //traditional way
+console.log(favoriteNumber)
+
+//can do different dat types random data but people don't do this
+const instructors2= ["Ben", 12, false, undefined]
+
+console.log(instructors2)
+
+/*
+//dot notation this is an ojbect 
+const person = {
+    firstName: "Seth",
+    lastName: "Bowman",
+    favoriteColor: "red"
+}
+//dot notation
+console.log(person.firstName)
+//or bracket notation
+console.log(person["favoriteColor"])
+
+*/
+
+const person = {
+    firstName: "Seth",
+    lastName: "Bowman",
+    favoriteColor: "red",
+    glasses: true,
+    codeSome: function ( ) {
+        console.log("const name = " + this.firstName + ";")
+    }
+}
+//functions are methods if attached to an object
+person.codeSome();
+
+//create as a blueprint/proto-type
+function Person ( firstName, lastName, favoriteColor) {
+    const person = {
+        firstName: "Seth",
+        lastName: "Bowman",
+        favoriteColor: "red",
+        glasses: true,
+        codeSome: function ( ) {
+            console.log("const name = " + this.firstName + ";")
+        }
+    }
+    return person;
+}
+
+
+const ben = Person ("ben", "bryant", "red")
+
+const seth = Person ("seth", "bowman", "red")
+
+ben.codeSome()
+seth.codeSOme()
+
+//
+const singleDigiits = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+console.log(singleDigits.length) //9 will come up
+console.log(singleDigiits[8]) //9 will come up because the first would be index 0
+
+letn name = "Ben Bryant"
+console.log(name.length) //ten characters because the space counts.
+
+
 // create an array - an array is group of similiar values within brackets; mutlitple value in a single variable using []
 let colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']; //red etc are strings that are colors
 
